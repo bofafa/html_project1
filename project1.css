@@ -1,0 +1,17 @@
+*, *::before, *::after{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+:root{
+  --clr-primary-2: hsl(86, 12%, 20%);
+  --clr-primary-3: hsl(86, 12%, 25%);
+  --clr-primary-4: hsl(86, 20%, 30%);
+  --clr-primary-5: hsl(85, 25%, 35%);
+  --clr-primary-6: hsl(85, 30%, 40%);
+  --clr-primary-7: hsl(84, 35%, 45%);
+  --clr-primary-8: hsl(84, 45%, 50%);
+  --clr-primary-9: hsl(83, 48%, 55%);
+  --clr-primary-10:hsl(82, 50%, 65%);
+}
