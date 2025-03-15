@@ -365,3 +365,43 @@ margin-right: 1rem;
 .footer-icons a:hover{
   color: var(--clr-primary-8);
 }
+
+/* tour */
+.tour-card{
+  background-color: var(--clr-primary-9);
+  margin: 1rem;
+}
+
+.tour-img-container {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.tour-date{
+  position: absolute;
+  color: var(--clr-white);
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background-color: var(--clr-primary-5);
+  padding:8px;
+   text-transform: capitalize;
+}
+
+.tour-info{
+ margin: 2rem;
+}
+
+
+.tour-info p{
+  margin: 2rem 0;
+
+}
+
+.tour-footer{
+  display: flex;
+  justify-content: space-between;
+ 
+}
+
+
