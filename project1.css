@@ -369,12 +369,12 @@ margin-right: 1rem;
 /* tour */
 .tour-card{
   background-color: var(--clr-primary-9);
-  margin: 1rem;
+  margin: 2rem;
 }
 
 .tour-img-container {
   position: relative;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .tour-date{
@@ -404,4 +404,28 @@ margin-right: 1rem;
  
 }
 
+.tours-center {
+  display: block;
+  justify-content: space-evenly;
+}
 
+@media (min-width: 768px) {
+  .tours-center {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1rem !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .tours-center {
+    grid-template-columns: 1fr 1fr 1fr !important;
+  }
+}
+
+@media (min-width: 1170px) {
+  .tours-center {
+    grid-template-columns: 1fr 1fr 1fr 1fr  !important;
+  
+  }
+}
