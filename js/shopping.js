@@ -175,3 +175,138 @@ li.appendChild(button);
 document.querySelector(".items").appendChild(li);
 }
 create3Item("beer");
+
+function createItem(item){
+  const li = document.createElement("li")
+}
+
+function onCLick(e){
+  console.log(e.pageY);
+
+}
+
+
+// EventListener 24Mar2025 14:18//
+const clearBtn = document.querySelector("#clear");
+function onClear() {
+   const itemList = document.querySelector("ul");
+   const items = itemList.querySelectorAll("li");
+   //Method 1 forEach//
+   // item.forEach((item) => item.remove());
+
+   //Method 2 while//
+   while (itemList.firstChild) {
+      itemList.removeChild(itemList.firstChild);
+      }  
+}
+
+clearBtn.addEventListener("click", onClear);
+// Remove event listerner//
+// setTimeout(() => {
+// clearBtn.removeEventListener("click", onClear);}, 5000);
+// Set Autoclick //
+// setTimeout(() =>clearBtn.click(), 3000);
+
+const logo = document.querySelector("img");
+// const onClick = () => console.log("click event");
+const onDoubleClick = () => {
+   if (document.body.style.backgroundColor !== "purple") {
+      document.body.style.backgroundColor = "purple";
+      document.body.style.color = "white";
+   } else {
+      document.body.style.backgroundColor = "white";
+      document.body.style.color = "black";
+   }
+};
+// logo.addEventListener("click", onClick);
+logo.addEventListener("dblclick", onDoubleClick);
+
+const onRightClick = () => console.log("right click");
+logo.addEventListener("contextmenu", onRightClick);
+
+const onMouseDown = () => console.log("mouse down");
+logo.addEventListener("mousedown", onMouseDown);
+
+const onMouseUp = () => console.log("mouse up");
+logo.addEventListener("mouseup", onMouseUp);
+
+const onMouseEnter = () => console.log("mouse enter");
+logo.addEventListener("mouseenter", onMouseEnter);
+
+const onMouseWheel = () => console.log("mouse wheel");
+logo.addEventListener("wheel", onMouseWheel);
+
+const onDragStart = () => console.log("drag start");
+logo.addEventListener("dragstart", onDragStart);
+
+const onDragEnd = () => console.log("drag end");
+logo.addEventListener("dragend", onDragEnd);
+ console.log("Yes");
+
+ //event obj//
+//  logo.addEventListener("click", e => {
+//    console.log(e);
+//    console.log(e.target); //Current target//
+// });
+//Add function on <img> for event obj//
+// function onClick(e) {
+//    e.target.style.padding = "20px";
+//    e.target.style.borderColor = "red";
+//    console.log(e.pageX); //x-axis position//
+//    console.log(e.pageY); //y-axis position//
+//  }
+// logo.addEventListener("click", onClick);
+
+
+// function onClick 24 Mar 2025//
+function onClick(e) {
+e.target.style.padding = e.target.style.padding !=="0px"
+? "0px":"30px";
+   e.target.style.backgroundColor = "red";
+   console.log(e.pageX); //x-axis position//
+   console.log(e.pageY); //y-axis position//
+ }
+logo.addEventListener("click", onClick);
+
+
+// keyboard event
+// A.key press
+const itemInput = document.querySelector("#item-input");
+const onKeyPress = (e) => {
+  console.log("keypress");
+};
+itemInput.addEventListener("keypress", onKeyPress);
+
+
+//B. key up
+const onKeyUp = (e) =>{
+  console.log("keyup");
+};
+itemInput.addEventListener("keyup", onKeyUp);
+
+//C. key down
+ const onKeyDown =(e) => {   
+//   if(e.key === "Enter"){
+//     alert("you pressed enter");
+//   }
+   if(e.keycode === "13"){
+    alert("you pressed enter");
+}
+
+if(e.code === "Digit1"){
+  console.log("you pressed 1");
+}
+
+if(e,repeat){
+  console.log("you are holding key : " + e.key);
+}
+
+console.log("Shift : " + e.shiftKey);
+console.log("Control : " + e.ctrlKey);
+console.log("Alt : " + e.altKey);
+if (e.ctrlKey && e.key == "K"){
+  alert("you pressed ctrl + K");
+}
+
+ };
+itemInput.addEventListener("keydown", onKeyDown);
