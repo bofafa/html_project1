@@ -128,120 +128,120 @@
 //console.log(document.body);
 
 // create item old way
-function createListItem(item){
-  const li = document.createElement("li");
-  li.innerHTML = `${item}
-  <button class ="remove-item btn-link text-red">
-  <i class ="fa-solid fa-xmark"></i></button>
-  `;
+// function createListItem(item){
+//   const li = document.createElement("li");
+//   li.innerHTML = `${item}
+//   <button class ="remove-item btn-link text-red">
+//   <i class ="fa-solid fa-xmark"></i></button>
+//   `;
 
-document.querySelector(".items").appendChild(li);
-}
-createListItem("egg");
+// document.querySelector(".items").appendChild(li);
+// }
+// createListItem("egg");
 
 
-// create item
-function createNewItem(item){
-  // step 1 : create element
-  const li = document.createElement("li");
-  //step 2: create next node
-  //step 3: append text node into element
-  li.appendChild(document.createTextNode(item));
-  //step 4: create button element
-  const button = document.createElement("button");
-  button.className = "remove-item btn-link text-red";
-  const icon = document.createElement("i");
-  icon.className = "fa-solid fa-xmark";
-  //step 5: build component one by one
-  button.appendChild(icon);
-  li.appendChild(button);
-  document.querySelector(".items").appendChild(li);
+// // create item
+// function createNewItem(item){
+//   // step 1 : create element
+//   const li = document.createElement("li");
+//   //step 2: create next node
+//   //step 3: append text node into element
+//   li.appendChild(document.createTextNode(item));
+//   //step 4: create button element
+//   const button = document.createElement("button");
+//   button.className = "remove-item btn-link text-red";
+//   const icon = document.createElement("i");
+//   icon.className = "fa-solid fa-xmark";
+//   //step 5: build component one by one
+//   button.appendChild(icon);
+//   li.appendChild(button);
+//   document.querySelector(".items").appendChild(li);
 
-}
-createNewItem("cherry");
+// }
+// createNewItem("cherry");
 
-createNewItem("cake");
-createNewItem("soda");
+// createNewItem("cake");
+// createNewItem("soda");
 
-function create3Item(item){
-  const li = document.createElement("li");
-li.appendChild(document.createTextNode(item));
-const button = document.createElement("button");
-button.className = "remove-item btn-link text-red";
-const icon = document.createElement("i");
-icon.className ="fa-solid fa-xmark"
-button.appendChild(icon);
-li.appendChild(button);
-document.querySelector(".items").appendChild(li);
-}
-create3Item("beer");
+// function create3Item(item){
+//   const li = document.createElement("li");
+// li.appendChild(document.createTextNode(item));
+// const button = document.createElement("button");
+// button.className = "remove-item btn-link text-red";
+// const icon = document.createElement("i");
+// icon.className ="fa-solid fa-xmark"
+// button.appendChild(icon);
+// li.appendChild(button);
+// document.querySelector(".items").appendChild(li);
+// }
+// create3Item("beer");
 
-function createItem(item){
-  const li = document.createElement("li")
-}
+// function createItem(item){
+//   const li = document.createElement("li")
+// }
 
-function onCLick(e){
-  console.log(e.pageY);
+// function onCLick(e){
+//   console.log(e.pageY);
 
-}
+// }
 
 
 // EventListener 24Mar2025 14:18//
-const clearBtn = document.querySelector("#clear");
-function onClear() {
-   const itemList = document.querySelector("ul");
-   const items = itemList.querySelectorAll("li");
+// const clearBtn = document.querySelector("#clear");
+// function onClear() {
+//    const itemList = document.querySelector("ul");
+//    const items = itemList.querySelectorAll("li");
    //Method 1 forEach//
    // item.forEach((item) => item.remove());
 
    //Method 2 while//
-   while (itemList.firstChild) {
-      itemList.removeChild(itemList.firstChild);
-      }  
-}
+//    while (itemList.firstChild) {
+//       itemList.removeChild(itemList.firstChild);
+//       }  
+// }
 
-clearBtn.addEventListener("click", onClear);
+// clearBtn.addEventListener("click", onClear);
 // Remove event listerner//
 // setTimeout(() => {
 // clearBtn.removeEventListener("click", onClear);}, 5000);
 // Set Autoclick //
 // setTimeout(() =>clearBtn.click(), 3000);
 
-const logo = document.querySelector("img");
+// const logo = document.querySelector("img");
 // const onClick = () => console.log("click event");
-const onDoubleClick = () => {
-   if (document.body.style.backgroundColor !== "purple") {
-      document.body.style.backgroundColor = "purple";
-      document.body.style.color = "white";
-   } else {
-      document.body.style.backgroundColor = "white";
-      document.body.style.color = "black";
-   }
-};
+// const onDoubleClick = () => {
+//    if (document.body.style.backgroundColor !== "purple") {
+//       document.body.style.backgroundColor = "purple";
+//       document.body.style.color = "white";
+//    } else {
+//       document.body.style.backgroundColor = "white";
+//       document.body.style.color = "black";
+//    }
+// };
 // logo.addEventListener("click", onClick);
-logo.addEventListener("dblclick", onDoubleClick);
+// logo.addEventListener("dblclick", onDoubleClick);
 
-const onRightClick = () => console.log("right click");
-logo.addEventListener("contextmenu", onRightClick);
+// const onRightClick = () => console.log("right click");
+// logo.addEventListener("contextmenu", onRightClick);
 
-const onMouseDown = () => console.log("mouse down");
-logo.addEventListener("mousedown", onMouseDown);
+// const onMouseDown = () => console.log("mouse down");
+// logo.addEventListener("mousedown", onMouseDown);
 
-const onMouseUp = () => console.log("mouse up");
-logo.addEventListener("mouseup", onMouseUp);
+// const onMouseUp = () => console.log("mouse up");
+// logo.addEventListener("mouseup", onMouseUp);
 
-const onMouseEnter = () => console.log("mouse enter");
-logo.addEventListener("mouseenter", onMouseEnter);
+// const onMouseEnter = () => console.log("mouse enter");
+// logo.addEventListener("mouseenter", onMouseEnter);
 
-const onMouseWheel = () => console.log("mouse wheel");
-logo.addEventListener("wheel", onMouseWheel);
+// const onMouseWheel = () => console.log("mouse wheel");
+// logo.addEventListener("wheel", onMouseWheel);
 
-const onDragStart = () => console.log("drag start");
-logo.addEventListener("dragstart", onDragStart);
+// const onDragStart = () => console.log("drag start");
+// logo.addEventListener("dragstart", onDragStart);
 
-const onDragEnd = () => console.log("drag end");
-logo.addEventListener("dragend", onDragEnd);
- console.log("Yes");
+// const onDragEnd = () => console.log("drag end");
+// logo.addEventListener("dragend", onDragEnd);
+//  console.log("Yes");
 
  //event obj//
 //  logo.addEventListener("click", e => {
@@ -258,55 +258,96 @@ logo.addEventListener("dragend", onDragEnd);
 // logo.addEventListener("click", onClick);
 
 
-// function onClick 24 Mar 2025//
-function onClick(e) {
-e.target.style.padding = e.target.style.padding !=="0px"
-? "0px":"30px";
-   e.target.style.backgroundColor = "red";
-   console.log(e.pageX); //x-axis position//
-   console.log(e.pageY); //y-axis position//
- }
-logo.addEventListener("click", onClick);
+// // function onClick 24 Mar 2025//
+// function onClick(e) {
+// e.target.style.padding = e.target.style.padding !=="0px"
+// ? "0px":"30px";
+//    e.target.style.backgroundColor = "red";
+//    console.log(e.pageX); //x-axis position//
+//    console.log(e.pageY); //y-axis position//
+//  }
+// logo.addEventListener("click", onClick);
 
 
-// keyboard event
-// A.key press
-const itemInput = document.querySelector("#item-input");
-const onKeyPress = (e) => {
-  console.log("keypress");
-};
-itemInput.addEventListener("keypress", onKeyPress);
+// // keyboard event
+// // A.key press
+// const itemInput = document.querySelector("#item-input");
+// const onKeyPress = (e) => {
+//   console.log("keypress");
+// };
+// //itemInput.addEventListener("keypress", onKeyPress);
 
 
-//B. key up
-const onKeyUp = (e) =>{
-  console.log("keyup");
-};
-itemInput.addEventListener("keyup", onKeyUp);
+// //B. key up
+// const onKeyUp = (e) =>{
+//   console.log("keyup");
+// };
+// //itemInput.addEventListener("keyup", onKeyUp);
 
-//C. key down
- const onKeyDown =(e) => {   
-//   if(e.key === "Enter"){
+// //C. key down
+//  const onKeyDown =(e) => {   
+// //   if(e.key === "Enter"){
+// //     alert("you pressed enter");
+// //   }
+//    if(e.keycode === "13"){
 //     alert("you pressed enter");
-//   }
-   if(e.keycode === "13"){
-    alert("you pressed enter");
+// }
+
+// if(e.code === "Digit1"){
+//   console.log("you pressed 1");
+// }
+
+// if(e,repeat){
+//   console.log("you are holding key : " + e.key);
+// }
+
+// console.log("Shift : " + e.shiftKey);
+// console.log("Control : " + e.ctrlKey);
+// console.log("Alt : " + e.altKey);
+// if (e.ctrlKey && e.key == "K"){
+//   alert("you pressed ctrl + K");
+// }
+
+//  };
+//itemInput.addEventListener("keydown", onKeyDown);
+
+//input
+itemInput = document.getElementById("item-input");
+priorityInput = document.getElementById("priority-input");
+checkbox = document.getElementById("checkbox");
+heading = document.querySelector("h1");
+
+function onInput(e){
+  heading.textContent = e.target.value;
+}
+itemInput.addEventListener("input", onInput);
+
+//check box
+function onChecked(e) {
+// const isChecked = e.target.checked;  <---- long 
+// heading.textContent = isChecked? "Checked" : "Not Checked"
+heading.textContent = e.target.checked? "Checked" : "Not Checked" //<----short
+}
+checkbox.addEventListener("input", onChecked);
+
+
+//function on focus
+function onFocus(){
+  console.log("input box is focused");
+  itemInput.style.outlineStyle = "solid";
+  itemInput.style.outlineColor= "red";
+  itemInput.style.outlinewidth= "2px";
+
+}
+itemInput.addEventListener("focus", onFocus);
+
+
+//function on blur
+function onBlur(){
+  console.log("input is not focused");
+  itemInput.style.outlineStyle = "none";
 }
 
-if(e.code === "Digit1"){
-  console.log("you pressed 1");
-}
+itemInput.addEventListener("blur", onBlur);
 
-if(e,repeat){
-  console.log("you are holding key : " + e.key);
-}
-
-console.log("Shift : " + e.shiftKey);
-console.log("Control : " + e.ctrlKey);
-console.log("Alt : " + e.altKey);
-if (e.ctrlKey && e.key == "K"){
-  alert("you pressed ctrl + K");
-}
-
- };
-itemInput.addEventListener("keydown", onKeyDown);
+priorityInput.addEventListener("change", onInput);
