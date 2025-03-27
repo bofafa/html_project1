@@ -351,3 +351,51 @@ function onBlur(){
 itemInput.addEventListener("blur", onBlur);
 
 priorityInput.addEventListener("change", onInput);
+
+//Form
+const form = document.getElementById("item-form");
+function onSubmit(e) {
+  // case 1 : stop sendgin out the data
+  e.preventDefault();
+  console.log ("submit");
+
+form.addEventListener("submit", onSubmit);
+//case 2 get value
+const item = document.getElementById("item-input").value;
+const priority = document.getElementById("priority-input").value;
+// case 3: validation of values at frontend side
+if( item === "" || priority === "0"){
+  alert ("please fill in all fields");
+  return;
+}
+console.log(item, priority);
+
+}
+// form.addEventListener("submit", onSubmit);
+
+function onSubmit2(e){
+  e.preventDefault();
+  const formData = new FormData(form);
+  const item = formData.get("item");
+  const priority = formData.get("priority");
+  console.log(item, priority);
+  const entries = formData.entries();
+  //console.log(entries);
+  for (let entry of entries){
+    console.log(entry[1]);
+  }
+}
+form.addEventListener("submit", onSubmit2);
+
+
+//stop event bubble up
+const button = document.querySelector("button");
+const div = document.querySelector("form div:nth-child");
+button.addEventListener("click", (e) => {
+  alert ("button was clicked");
+  e.stopPropagation();
+});
+
+div.addEventListener("click", (e) => {
+  alert("div was clicked");
+});
