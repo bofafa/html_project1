@@ -82,22 +82,130 @@ img:not(.nav-logo){
 }
 
 /* nav */
-.nav-logo{
-  width:70px;
-  height: auto;
-}
-
-.navbar{
+.navbar {
   position: fixed;
-  top: 0;
-  left:0;
-  width: 100%;
-  height: var(--navbar-height);
+  height: 4rem;
   background: var(--clr-white);
-  box-shadow: var(--dark-shaddow);
   display: flex;
   align-items: center;
-  z-index: 2;
+  justify-content: space-between;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  box-shadow: var(--dark-shaddow);
+}
+
+.nav-center {
+  width: 90vw;
+  max-width: 1170px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  position: relative; /* ⭐⭐ 加呢行 ⭐⭐ */
+}
+.nav-header {
+  display: flex;
+  width: 95vw;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-social {
+  display: flex;
+  gap: 1rem;
+  margin-left: auto; 
+}
+
+.nav-link {
+  color: var(--clr-primary-2);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1rem;
+  justify-content: center;
+}
+
+
+.nav-link:hover {
+  color: var(--clr-primary-6);
+}
+
+
+.nav-logo {
+  
+  width: 50px;
+  height: auto;
+  margin-left: 5rem;
+  margin-right: 1rem;
+}
+
+
+.fa-brands{
+  display: block;
+  font-size: 1.2rem;
+  margin: 0.25rem;
+  color: var(--clr-primary-2);
+}
+
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: var(--clr-primary-2);
+  cursor: pointer;
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex: 1;
+}
+
+/* only center in large screens */
+@media (min-width: 769px) {
+  .nav-links {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+    .show-links{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: var(--navbar-height);
+    left: 0;
+    background: var(--clr-white);
+    width: 100%;
+    padding: 1rem 0;
+    box-shadow: var(--light-shadow);
+    text-align: center;
+    z-index: 998;
+    transition: var(--transition); /* 可以加動畫 */
+  }
+
+  /* 👇 展開 menu 嘅時候 */
+  .nav-links.show-links {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-social {
+    display: none;
+  }
 }
 
 /* hero */
