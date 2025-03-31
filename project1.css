@@ -80,98 +80,73 @@ img:not(.nav-logo){
   width: 100%;
   display: block;
 }
-
-/* nav */
 .navbar {
   position: fixed;
-  height: 4rem;
-  background: var(--clr-white);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   width: 100%;
+  height: 4rem;
   top: 0;
+  background: var(--clr-white);
   z-index: 10;
   box-shadow: var(--dark-shaddow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-primary-5);
 }
 
 .nav-center {
   width: 90vw;
   max-width: 1170px;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* nav-header | links | social */
   align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  position: relative; /* ⭐⭐ 加呢行 ⭐⭐ */
 }
+
+/* nav-header: left logo + hamburger */
 .nav-header {
   display: flex;
-  width: 95vw;
   align-items: center;
-  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* hamburger icon */
+.nav-toggle {
+  display: none;
+  font-size: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--clr-primary-2);
+}
+
+.nav-logo {
+  width: 50px;
+  height: auto;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 1rem;
+  text-decoration: uppercase;
+  color: var(--clr-primary-3);
 }
 
 .nav-social {
   display: flex;
+  justify-content: flex-end;
   gap: 1rem;
-  margin-left: auto; 
 }
 
-.nav-link {
-  color: var(--clr-primary-2);
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 1rem;
-  justify-content: center;
-}
-
-
-.nav-link:hover {
-  color: var(--clr-primary-6);
-}
-
-
-.nav-logo {
-  
-  width: 50px;
-  height: auto;
-  margin-left: 5rem;
-  margin-right: 1rem;
-}
-
-
-.fa-brands{
-  display: block;
+/* Brands icon */
+.fa-brands {
   font-size: 1.2rem;
-  margin: 0.25rem;
   color: var(--clr-primary-2);
 }
 
-.nav-toggle {
-  display: none;
-  background: transparent;
-  border: none;
-  font-size: 2rem;
-  color: var(--clr-primary-2);
-  cursor: pointer;
-}
-
-
-.nav-links {
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-  flex: 1;
-}
 
 /* only center in large screens */
-@media (min-width: 769px) {
-  .nav-links {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
 
 
 @media (max-width: 768px) {
@@ -192,6 +167,7 @@ img:not(.nav-logo){
     text-align: center;
     z-index: 998;
     transition: var(--transition); /* 可以加動畫 */
+    color: var(--clr-primary-2);
   }
 
   /* 👇 展開 menu 嘅時候 */
@@ -266,11 +242,31 @@ img:not(.nav-logo){
   margin: 3rem;
 }
 
-@media (min-width: 768px){
-  .about-content{
-    display: grid;
-    grid-template-columns: 1fr;
-    column-gap: 2rem;
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .show-links {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: var(--navbar-height);
+    left: 0;
+    width: 100%;
+    background: var(--clr-white);
+    z-index: 999;
+    text-align: center;
+    box-shadow: var(--light-shadow);
+    padding: 1rem 0;
+  }
+
+  .nav-social {
+    display: none;
   }
 }
 

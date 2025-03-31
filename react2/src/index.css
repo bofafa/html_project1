@@ -1,0 +1,54 @@
+*, *::before, *::after{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  /* border: red solid 1px; */
+}
+
+:root{
+  --clr-primary-1: hsl(193, 12%, 20%);
+  --clr-primary-2: hsl(193, 30%, 25%);
+  --clr-primary-3: hsl(193, 35%, 30%);
+  --clr-primary-4: hsl(193, 40%, 35%);   /* main color*/
+  --clr-primary-5: hsl(193, 45%, 40%);
+  --clr-primary-6: hsl(193, 50%, 50%);
+  --clr-primary-7: hsl(193, 83%, 50%);
+  --clr-primary-8: hsl(193, 86%, 66%); 
+  --clr-primary-9: hsl(193, 85%, 80%);
+
+
+/* gray scale */
+--clr-grey-1: hsl(209, 2%, 20%);
+--clr-grey-2: hsl(209, 5%, 25%);
+--clr-grey-3: hsl(210, 7%, 30%);
+--clr-grey-4: hsl(210, 8%, 35%);
+--clr-grey-5: hsl(210, 9%, 40%);
+--clr-grey-6: hsl(211, 10%,45%);
+--clr-grey-7: hsl(212, 10%,50%);
+--clr-grey-8: hsl(212, 10%,60%);
+--clr-grey-9: hsl(212, 10%,65%);
+
+--clr-white: #fff;
+
+--transition: all 0.3s linear;
+--spacing: 0.5rem;
+--radius:0.5rem;
+--light-shadow: 0 1px 10px  rgb(147, 147, 147);
+--dark-shaddow:  0 1px 10px  rgb(123, 123, 123);
+--navbar-height: 4rem;
+
+}
+
+html{
+  scroll-behavior: smooth;
+  letter-spacing: 3px;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--clr-white);
+  color: var(--clr-primary-2);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+
