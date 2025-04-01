@@ -1,3 +1,8 @@
+import tour1 from './images/2.png'
+import tour2 from './images/3.png'
+import tour3 from './images/4.png'
+import tour4 from './images/5.png'
+
 export const services = [
   {
     id : 1,
@@ -17,4 +22,55 @@ export const services = [
     title: "amazing comfort",
     text : "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem, voluptatum."
   }
-]
+];
+
+
+ 
+export const tours =[
+  {
+id: 1,
+image: tour1,
+date: "August 26th 2025",
+title: "Tibet Adventure",
+info: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+location: "China",
+duration: "7 days",
+cost: "HKD$11,999",
+
+  },
+  {
+    id: 2,
+    image: tour2,
+    date: "August 26th 2025",
+    title: "Tibet Adventure",
+    info: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    location: "China",
+    duration: "7 days",
+    cost: "HKD$11,999",
+    
+      },
+      {
+        id: 3,
+        image: tour3,
+        date: "August 26th 2025",
+        title: "Tibet Adventure",
+        info: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        location: "China",
+        duration: "7 days",
+        cost: "HKD$11,999",
+        
+          },
+          {
+            id: 4,
+            image: tour4,
+            date: "August 26th 2025",
+            title: "Tibet Adventure",
+            info: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+            location: "China",
+            duration: "7 days",
+            cost: "HKD$11,999",
+            
+              }
+
+
+];
