@@ -18,7 +18,7 @@ export const services = [
   },
   {
     id : 3,
-    icon : "a-solid fa-socks",
+    icon : "fa-solid fa-socks",
     title: "amazing comfort",
     text : "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem, voluptatum."
   }
@@ -73,4 +73,42 @@ cost: "HKD$11,999",
               }
 
 
+];
+
+export const pageLink = [
+  {id : 1,
+  href : "#home",
+  text : "home"
+},
+
+{id : 2,
+  href : "#about",
+  text : "about"
+},
+{id : 3,
+  href : "#services",
+  text : "services"
+},
+{id : 4,
+  href : "#tours",
+  text : "tours"
+}
+];
+
+export const socialLink = [
+  {
+    id: 1,
+    href: "http://www.facebook.com/bopuinar",
+    icon: "fa-brands fa-facebook"
+  },
+  {
+    id: 2,
+    href: "http://www.instagram.com/ar_bo",
+    icon: "fa-brands fa-instagram"
+  },
+  {
+    id: 3,
+    href: "http://www.x.com/bohui",
+    icon: "fa-brands fa-x-twitter"
+  }
 ];

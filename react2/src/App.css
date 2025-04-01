@@ -449,8 +449,9 @@ margin-right: 1rem;
 .tour-info{
  margin: 2rem;
 }
-
-
+.tour-card{
+  font-size: 10px;
+}
 .tour-info p{
   margin: 2rem 0;
 
@@ -461,6 +462,11 @@ margin-right: 1rem;
   justify-content: space-between;
  
 }
+
+footer.footer-icons.fa-brands{ 
+  color: var(--clr-white);
+}
+
 
 .tours-center {
   display: block;
